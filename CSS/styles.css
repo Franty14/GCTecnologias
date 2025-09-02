@@ -749,3 +749,34 @@
   .trust-strip{ --logo-h:78px; --gap:18px; }
   .trust-list{ grid-template-columns:repeat(2,1fr); }
 }
+
+/* === Ajustes móviles para Misión / Visión (sección ¿Quiénes somos?) === */
+/* Tablets pequeñas y teléfonos grandes */
+@media (max-width: 767.98px){
+  #quienes-somos .about-body p{
+    font-size: .98rem;       /* antes heredaba ~1rem–1.05rem */
+    line-height: 1.5;        /* mejora legibilidad */
+  }
+  #quienes-somos .about-card{
+    max-height: 360px;       /* un poquito más alta */
+  }
+}
+
+/* Teléfonos (≤576px) */
+@media (max-width: 575.98px){
+  #quienes-somos .about-card{
+    aspect-ratio: 4 / 3;     /* igual proporción pero… */
+    min-height: 240px;       /* ↑ de 200px a 240px */
+    max-height: 320px;       /* ↑ de 280px a 320px */
+  }
+  #quienes-somos .about-title-text{
+    font-size: clamp(.95rem, 3.8vw, 1.05rem);  /* título un pelín más compacto */
+  }
+  #quienes-somos .about-body{
+    padding: .85rem 1rem 1rem;                 /* resta un poco de padding para dar aire al texto */
+  }
+  #quienes-somos .about-body p{
+    font-size: .92rem;       /* texto ligeramente más pequeño en móvil */
+    line-height: 1.45;
+  }
+}
